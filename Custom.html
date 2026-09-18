@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tendo Bakery - Custom</title>
+</head>
+<body>
+    <header>
+        <h1>Tendo Bakery</h1>
+    </header>
+      <link rel="stylesheet" href="style.css"> 
+    <nav>
+        <a href="index.html">Category</a> | 
+        <a href="custom.html">Custom</a> | 
+        <a href="account.html">Account</a> | 
+        <a href="checkout.html">Checkout</a>
+        <a href="Homepage.html">Home</a> | 
+    </nav>
+    
+    <main>
+        <h2>Custom</h2>
+        
+        <div>
+            <div>
+                <p>add pic here</p>
+                <button onclick="openForm('Cakes')">Cakes</button>
+            </div>
+            <br>
+            <div>
+                <p>add pic here</p>
+                <button onclick="openForm('Cupcakes')">Cupcakes</button>
+            </div>
+            <br>
+            <div>
+                <p>add pic here</p>
+                <button onclick="openForm('Muffins')">Muffins</button>
+            </div>
+            <br>
+            <div>
+                <p>add pic here</p>
+                <button onclick="openForm('Cinnamon rolls')">Cinnamon rolls</button>
+            </div>
+        </div>
+
+        <div id="form-area" style="display: none;">
+            <h3 id="item-title"></h3>
+            <textarea id="note-box" rows="4" cols="50"></textarea>
+            <br>
+            <button id="submit" onclick="saveNote()">submit</button>
+        </div>
+    </main>
+
+    <script>
+        let chosenItem = "";
+
+        function openForm(name) {
+            chosenItem = name;
+            document.getElementById('item-title').innerText = name;
+
+            let saved = JSON.parse(localStorage.getItem('customOrders')) || {};
+            document.getElementById('note-box').value = saved[chosenItem] || "";
+            
+            document.getElementById('form-area').style.display = 'block';
+        }
+
+        function saveNote() {
+            let userText = document.getElementById('note-box').value;
+            let saved = JSON.parse(localStorage.getItem('customOrders')) || {};
+            
+            saved[chosenItem] = userText;
+            localStorage.setItem('customOrders', JSON.stringify(saved));
+            
+            alert("Saved");
+        }
+    </script>
+</body>
+</html>
