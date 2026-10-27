@@ -52,3 +52,4 @@ for pseudo robot.txt and research on robot
 https://youtu.be/R_UYM9yEuYg?si=ZaeaEavIxH8S0bIj
 for xml sitemap and 
 www.webflow.com .
+inserted files had to be resent due to techical issues and organized for the files to be sorted into a folder
