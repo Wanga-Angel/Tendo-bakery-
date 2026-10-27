@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description"
+        content="Explore Tendo Bakery in Elim, Limpopo. Browse cakes, cupcakes, muffins and cinnamon rolls, and ask about custom cake options.">
+
+  <title>Tendo Bakery | Bakery in Elim, Limpopo</title>
+
+  <link rel="canonical"
+        href="https://tendobakery.co.za/Homepage.html">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <section class="welcome-hero"
+             aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Your bakery in Elim</h2>
+
+      <p>
+        Welcome to Tendo Bakery. Browse cakes, cupcakes, muffins
+        and cinnamon rolls, then prepare your own order draft.
+      </p>
+
+      <p>
+        Ask about Tendo Bakery custom cakes, fresh bread in Limpopo,
+        or artisan confectionery in Elim. Current products, prices
+        and availability must be confirmed before an order is agreed.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="Category.html">
+          Browse our categories
+        </a>
+
+        <a class="button" href="enquiry.html">
+          Make an enquiry
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading">How this website works</h2>
+
+      <details>
+        <summary>How do I prepare an order?</summary>
+        <p>
+          Choose flavours and quantities on the
+          <a href="Category.html">Category page</a>,
+          add instructions on the
+          <a href="Custom.html">Custom page</a>,
+          and review your selections in your
+          <a href="checkout.html">order draft</a>.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does saving a draft place an order?</summary>
+        <p>
+          No. Browser selections are drafts only. Send an enquiry
+          and wait for the bakery to confirm prices, availability
+          and arrangements. This website does not take payment.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where are you located?</summary>
+        <address>
+          123 Baker Street, Elim, Limpopo, 0960, South Africa.
+        </address>
+        <p>
+          See the interactive map on our
+          <a href="contact.html">Contact page</a>.
+        </p>
+      </details>
+    </section>
+
+    <section aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Bakery gallery</h2>
+
+      <p>
+        Select an image for a larger view. Use Previous and Next
+        or the arrow keys. Press Escape to close.
+      </p>
+
+      <div class="grid">
+        <button type="button" class="gallery-button"
+                data-gallery="0"
+                aria-haspopup="dialog"
+                aria-controls="lightbox">
+          <img src="cakes.jpeg" alt="Cakes"
+               width="400" height="300"
+               loading="lazy" decoding="async">
+          <span>View cakes</span>
+        </button>
+
+        <button type="button" class="gallery-button"
+                data-gallery="1"
+                aria-haspopup="dialog"
+                aria-controls="lightbox">
+          <img src="cupcakes.jpeg" alt="Cupcakes"
+               width="400" height="300"
+               loading="lazy" decoding="async">
+          <span>View cupcakes</span>
+        </button>
+
+        <button type="button" class="gallery-button"
+                data-gallery="2"
+                aria-haspopup="dialog"
+                aria-controls="lightbox">
+          <img src="muffins.jpeg" alt="Muffins"
+               width="400" height="300"
+               loading="lazy" decoding="async">
+          <span>View muffins</span>
+        </button>
+
+        <button type="button" class="gallery-button"
+                data-gallery="3"
+                aria-haspopup="dialog"
+                aria-controls="lightbox">
+          <img src="cinnamon rolls.jpeg" alt="Cinnamon rolls"
+               width="400" height="300"
+               loading="lazy" decoding="async">
+          <span>View cinnamon rolls</span>
+        </button>
+      </div>
+    </section>
+
+    <dialog id="lightbox" aria-labelledby="lightbox-title">
+      <h2 id="lightbox-title">Bakery image viewer</h2>
+
+      <button id="lightbox-close" type="button" autofocus>
+        Close gallery
+      </button>
+
+      <figure>
+        <img id="lightbox-image"
+             src="cakes.jpeg" alt="Cakes"
+             width="800" height="600">
+
+        <figcaption id="lightbox-caption"
+                    aria-live="polite"></figcaption>
+      </figure>
+
+      <div class="actions">
+        <button id="lightbox-prev" type="button">
+          Previous image
+        </button>
+
+        <button id="lightbox-next" type="button">
+          Next image
+        </button>
+      </div>
+    </dialog>
+
+    <p class="demo-note">
+      Draft selections are stored in this browser.
+      Saving details or reviewing a draft does not create a secure
+      account, send an order or take payment.
+    </p>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        Enable JavaScript for product selection, the image viewer
+        and interactive forms. You can still read our pages and
+        email the bakery directly.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="contact.html">Contact and location</a>
+    </p>
+  </footer>
+</body>
+</html>

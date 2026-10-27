@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description"
+        content="Enquire about Tendo Bakery custom cakes and bakery products in Elim, Limpopo. Request prices and availability.">
+
+  <title>Custom Cakes and Product Enquiries | Tendo Bakery</title>
+
+  <link rel="canonical"
+        href="https://tendobakery.co.za/enquiry.html">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <h2>Ask about products, prices and availability</h2>
+
+    <p>
+      Tell us what you need. This page prepares an enquiry;
+      it cannot calculate a real price, guarantee availability
+      or reserve products.
+    </p>
+
+    <p class="notice">
+      Save contact details and a preferred category in
+      <a href="Account.html">My profile</a>
+      to fill these fields automatically.
+      Preparing an email draft does not send it.
+    </p>
+
+    <form id="enquiry-form"
+          data-ajax-kind="enquiry"
+          action="mailto:contact@tendobakery.co.za"
+          method="post"
+          enctype="text/plain">
+
+      <fieldset>
+        <legend>Your contact details</legend>
+
+        <label for="enquiry-name">Full name (required)</label>
+        <input id="enquiry-name" name="name"
+               type="text" maxlength="100"
+               autocomplete="name" required>
+
+        <label for="enquiry-email">Email address (required)</label>
+        <input id="enquiry-email" name="email"
+               type="email" maxlength="254"
+               autocomplete="email" required>
+
+        <label for="enquiry-phone">Phone number (optional)</label>
+        <input id="enquiry-phone" name="phone"
+               type="tel" maxlength="30"
+               autocomplete="tel"
+               aria-describedby="enquiry-phone-help">
+
+        <p id="enquiry-phone-help" class="help">
+          Use 7–15 digits, including a country code where appropriate.
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>What would you like to enquire about?</legend>
+
+        <label for="enquiry-product">
+          Product or enquiry topic (required)
+        </label>
+
+        <select id="enquiry-product" name="product" required>
+          <option value="">Choose a product or topic</option>
+          <option>Cakes</option>
+          <option>Cupcakes</option>
+          <option>Muffins</option>
+          <option>Cinnamon rolls</option>
+          <option>Other product or availability question</option>
+        </select>
+
+        <label for="enquiry-quantity">
+          Requested quantity (required)
+        </label>
+
+        <input id="enquiry-quantity" name="quantity"
+               type="number" min="1" max="999"
+               step="1" value="1" required
+               aria-describedby="quantity-help">
+
+        <p id="quantity-help" class="help">
+          For a general question, leave this at one and explain
+          in the message. This is a request, not a stock check.
+        </p>
+
+        <label for="enquiry-date">Preferred date (optional)</label>
+        <input id="enquiry-date" name="desiredDate" type="date">
+
+        <label for="enquiry-message">
+          Your requirements or question (required)
+        </label>
+
+        <textarea id="enquiry-message" name="message"
+                  rows="6" maxlength="2000" required
+                  aria-describedby="enquiry-message-help"></textarea>
+
+        <p id="enquiry-message-help" class="help">
+          Maximum 2,000 characters. Do not include passwords,
+          payment details or sensitive information.
+        </p>
+
+        <label class="checkbox-label" for="include-order">
+          <input id="include-order"
+                 name="includeOrder"
+                 type="checkbox" value="yes">
+          <span>
+            Include my saved draft selections and custom instructions
+            in this enquiry.
+          </span>
+        </label>
+      </fieldset>
+
+      <p data-service-status class="notice">
+        Demo mode: online sending is disabled.
+        Prepare an email draft and send it yourself in your email app.
+      </p>
+
+      <div class="actions">
+        <button type="button" data-preview-enquiry>
+          Preview enquiry response
+        </button>
+
+        <button type="button" data-email-draft>
+          Prepare email draft
+        </button>
+
+        <button type="submit" data-send-online disabled>
+          Send online (AJAX)
+        </button>
+      </div>
+
+      <p class="help">
+        If an email application does not open, email
+        <a href="mailto:contact@tendobakery.co.za">
+          contact@tendobakery.co.za
+        </a>
+        directly. Nothing is sent by previewing this form.
+      </p>
+    </form>
+
+    <p id="enquiry-result" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        Enable JavaScript for interactive forms, or
+        <a href="mailto:contact@tendobakery.co.za">
+          email the bakery directly
+        </a>.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="contact.html">Contact and location</a>
+    </p>
+  </footer>
+</body>
+</html>

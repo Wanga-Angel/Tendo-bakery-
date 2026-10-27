@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description"
+        content="Browse Tendo Bakery cakes, cupcakes, muffins and cinnamon rolls in Elim. Search categories, sort them and save flavour quantities.">
+
+  <title>Cakes and Bakery Categories | Tendo Bakery, Elim</title>
+
+  <link rel="canonical"
+        href="https://tendobakery.co.za/Category.html">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <h2>Our bakery categories</h2>
+
+    <p>
+      Explore cakes, cupcakes, muffins and cinnamon rolls.
+      Choose quantities from zero to four for each flavour.
+      Zero removes that flavour from your draft.
+    </p>
+
+    <p class="notice">
+      These are requested selections, not confirmed stock or prices.
+      <a href="enquiry.html">Ask the bakery</a>
+      to confirm availability.
+    </p>
+
+    <div class="toolbar">
+      <div>
+        <label for="product-search">
+          Search categories or flavours
+        </label>
+
+        <input type="search" id="product-search"
+               placeholder="For example: cakes or vanilla"
+               maxlength="100"
+               aria-controls="category-grid">
+      </div>
+
+      <div>
+        <label for="product-sort">Sort categories</label>
+
+        <select id="product-sort" aria-controls="category-grid">
+          <option value="az">Name: A–Z</option>
+          <option value="za">Name: Z–A</option>
+        </select>
+      </div>
+    </div>
+
+    <p id="search-results" role="status"
+       aria-live="polite"></p>
+
+    <div id="category-grid" class="grid"></div>
+
+    <section id="category-sub-panel"
+             aria-labelledby="flavour-heading" hidden>
+      <h3 id="flavour-heading" tabindex="-1">
+        Flavours for <span id="active-cat-label"></span>
+      </h3>
+
+      <div class="table-wrap">
+        <table>
+          <caption>
+            Changes save in this browser when a quantity is selected.
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Flavour</th>
+              <th scope="col">Quantity</th>
+            </tr>
+          </thead>
+
+          <tbody id="flavors-tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="actions">
+        <a class="button" href="checkout.html">
+          Review order draft
+        </a>
+
+        <a class="button" href="Custom.html">
+          Add custom instructions
+        </a>
+      </div>
+    </section>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        Our categories are cakes, cupcakes, muffins and cinnamon rolls.
+        Enable JavaScript to search, sort and choose quantities, or
+        <a href="mailto:contact@tendobakery.co.za">
+          email the bakery
+        </a>.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="contact.html">Contact and location</a>
+    </p>
+  </footer>
+</body>
+</html>

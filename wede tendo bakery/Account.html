@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description"
+        content="Manage your local Tendo Bakery customer details, saved preferences and draft selections.">
+
+  <title>My Customer Details and Preferences | Tendo Bakery</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <h2>My customer details and preferences</h2>
+
+    <p class="demo-note">
+      This is a local convenience profile, not a secure login account.
+      Anyone using this browser may see saved details.
+      It does not synchronise between devices.
+      Never enter passwords, bank details or sensitive information.
+    </p>
+
+    <p id="profile-summary" class="notice">
+      No profile has been loaded.
+    </p>
+
+    <!-- JavaScript intercepts this form.
+         The website root is not assumed to process submissions. -->
+    <form action="https://tendobakery.co.za"
+          method="POST" id="bakeryOrderForm">
+
+      <fieldset>
+        <legend>Your contact details</legend>
+
+        <label for="customer-name">Full name (required)</label>
+        <input id="customer-name"
+               name="customer_name"
+               type="text"
+               autocomplete="name"
+               maxlength="100"
+               required>
+
+        <label for="phone-number">Phone number (required)</label>
+        <input id="phone-number"
+               name="phone_number"
+               type="tel"
+               autocomplete="tel"
+               maxlength="30"
+               aria-describedby="phone-help"
+               required>
+
+        <p id="phone-help" class="help">
+          Use 7–15 digits, with an optional country code.
+          Spaces, brackets and hyphens are allowed.
+        </p>
+
+        <label for="customer-email">Email address (required)</label>
+        <input id="customer-email"
+               name="email"
+               type="email"
+               autocomplete="email"
+               maxlength="254"
+               required>
+
+        <label for="profile-category">
+          Preferred category (optional)
+        </label>
+
+        <select id="profile-category" name="preferredCategory">
+          <option value="">No preference</option>
+          <option>Cakes</option>
+          <option>Cupcakes</option>
+          <option>Muffins</option>
+          <option>Cinnamon rolls</option>
+        </select>
+      </fieldset>
+
+      <input type="hidden"
+             name="saved_preferences"
+             id="customerPrefs"
+             value="{}">
+
+      <input type="hidden"
+             name="order_summary"
+             id="orderSummaryData"
+             value="{}">
+
+      <p class="help">
+        Hidden fields contain your preference and saved draft.
+        Hidden fields are not secure storage or proof of a valid order.
+        No password is included.
+      </p>
+
+      <label class="checkbox-label" for="remember-profile">
+        <input id="remember-profile"
+               name="remember"
+               type="checkbox"
+               value="yes"
+               required>
+
+        <span>
+          I agree to saving my details in this browser when I choose
+          Save locally. If I choose Submit online, I agree to sending
+          these details, preferences and draft to the configured service.
+          I can remove the local profile below.
+        </span>
+      </label>
+
+      <p id="profile-service-status" class="notice">
+        Demo mode: local saving only.
+      </p>
+
+      <div class="actions">
+        <button type="submit" data-save-profile disabled>
+          Save details locally
+        </button>
+
+        <button type="submit" data-profile-send-online disabled>
+          Submit details online
+        </button>
+
+        <button id="clear-profile" type="button">
+          Remove saved profile
+        </button>
+      </div>
+
+      <p class="help">
+        Saving locally never sends a request. Online sending requires
+        a configured and tested submission service.
+      </p>
+    </form>
+
+    <section aria-labelledby="draft-heading">
+      <h2 id="draft-heading">My saved draft</h2>
+
+      <p id="saved-order-summary">
+        Enable JavaScript to load your draft summary.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="checkout.html">Review draft</a>
+        <a class="button" href="Category.html">Choose products</a>
+        <a class="button" href="enquiry.html">Ask for a quote</a>
+      </div>
+
+      <p>
+        Saved contact details fill the enquiry and contact forms.
+        Your preferred category fills the enquiry product field.
+        This is not purchase history or a confirmed order.
+      </p>
+    </section>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        JavaScript is required to handle this profile.
+        Submission is disabled without it.
+        <a href="mailto:contact@tendobakery.co.za">
+          Email the bakery directly
+        </a>.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="contact.html">Contact and location</a>
+    </p>
+  </footer>
+</body>
+</html>

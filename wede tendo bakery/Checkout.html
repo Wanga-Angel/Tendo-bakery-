@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description"
+        content="Review your saved Tendo Bakery draft before asking the bakery to confirm prices and availability.">
+
+  <title>Review My Order Draft | Tendo Bakery</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <h2>Review my order draft</h2>
+
+    <p class="demo-note">
+      This is not a live checkout. No payment is collected.
+      Prices, availability and arrangements require confirmation
+      from the bakery.
+    </p>
+
+    <section id="checkout-box" aria-label="Draft summary">
+      <h3>Selected products</h3>
+      <div id="category-data" class="order-list"></div>
+
+      <h3>Custom instructions</h3>
+      <div id="custom-data" class="order-list"></div>
+
+      <div class="actions">
+        <a class="button" href="Category.html">Edit products</a>
+        <a class="button" href="Custom.html">Edit instructions</a>
+
+        <button id="cancel-order" type="button">
+          Clear draft
+        </button>
+
+        <button id="confirm-order" type="button">
+          Review completed draft
+        </button>
+      </div>
+    </section>
+
+    <section id="thanks-box"
+             aria-labelledby="thanks-heading" hidden>
+      <h3 id="thanks-heading" tabindex="-1">
+        Your draft is ready for an enquiry
+      </h3>
+
+      <p>
+        Nothing has been sent to the bakery, reserved or paid for.
+        Use the enquiry page and choose “Include my saved draft”
+        to request a response.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="enquiry.html">Make an enquiry</a>
+
+        <button id="review-order" type="button">
+          Return to summary
+        </button>
+      </div>
+    </section>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        Enable JavaScript to display saved selections, or
+        <a href="mailto:contact@tendobakery.co.za">
+          contact the bakery directly
+        </a>.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="contact.html">Contact and location</a>
+    </p>
+  </footer>
+</body>
+</html>

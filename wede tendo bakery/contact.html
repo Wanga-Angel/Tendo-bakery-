@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description"
+        content="Contact Tendo Bakery at 123 Baker Street, Elim, Limpopo, 0960. View our location map or prepare a general message.">
+
+  <title>Contact and Location | Tendo Bakery, Elim</title>
+
+  <link rel="canonical"
+        href="https://tendobakery.co.za/contact.html">
+
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="anonymous"
+    defer></script>
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <h2>Contact Tendo Bakery</h2>
+
+    <address>
+      123 Baker Street<br>
+      Elim, Limpopo<br>
+      0960<br>
+      South Africa
+    </address>
+
+    <p>
+      Email:
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+    </p>
+
+    <p>
+      For prices, custom cakes or availability, use the
+      <a href="enquiry.html">product enquiry form</a>.
+      For general messages or feedback, use the form below.
+    </p>
+
+    <section aria-labelledby="location-heading">
+      <h2 id="location-heading">Find us in Elim</h2>
+
+      <p id="map-status" role="status">
+        Loading the interactive map…
+      </p>
+
+      <div id="map"
+           role="region"
+           aria-label="Interactive map of the supplied Tendo Bakery location"
+           aria-describedby="map-status"></div>
+
+      <p>
+        <a href="https://www.openstreetmap.org/?mlat=-23.1601&amp;mlon=30.0524#map=14/-23.1601/30.0524">
+          Open the supplied location in OpenStreetMap
+        </a>
+      </p>
+
+      <p class="help">
+        The map uses the project coordinates -23.1601, 30.0524.
+        Confirm the pin before visiting. Loading the map sends
+        requests to external map providers.
+      </p>
+    </section>
+
+    <section aria-labelledby="message-heading">
+      <h2 id="message-heading">Send a general message</h2>
+
+      <form id="contact-form"
+            data-ajax-kind="contact"
+            action="mailto:contact@tendobakery.co.za"
+            method="post"
+            enctype="text/plain">
+
+        <label for="contact-name">Full name (required)</label>
+        <input id="contact-name" name="name"
+               type="text" maxlength="100"
+               autocomplete="name" required>
+
+        <label for="contact-email">Email address (required)</label>
+        <input id="contact-email" name="email"
+               type="email" maxlength="254"
+               autocomplete="email" required>
+
+        <label for="contact-phone">Phone number (optional)</label>
+        <input id="contact-phone" name="phone"
+               type="tel" maxlength="30"
+               autocomplete="tel"
+               aria-describedby="contact-phone-help">
+
+        <p id="contact-phone-help" class="help">
+          Use 7–15 digits, including a country code where appropriate.
+        </p>
+
+        <label for="contact-type">Message type (required)</label>
+        <select id="contact-type" name="messageType" required>
+          <option value="">Choose a message type</option>
+          <option>General question</option>
+          <option>Feedback</option>
+          <option>Website assistance</option>
+          <option>Other</option>
+        </select>
+
+        <label for="contact-message">Your message (required)</label>
+        <textarea id="contact-message" name="message"
+                  rows="6" maxlength="2000" required
+                  aria-describedby="contact-message-help"></textarea>
+
+        <p id="contact-message-help" class="help">
+          Maximum 2,000 characters. Do not include passwords,
+          bank details or sensitive information.
+          Messages are not saved automatically in this browser.
+        </p>
+
+        <p data-service-status class="notice">
+          Demo mode: online sending is disabled.
+          Prepare an email draft and send it in your email app.
+        </p>
+
+        <div class="actions">
+          <button type="button" data-email-draft>
+            Prepare email draft
+          </button>
+
+          <button type="submit" data-send-online disabled>
+            Send online (AJAX)
+          </button>
+        </div>
+
+        <p class="help">
+          Preparing an email draft opens your email application.
+          You must press Send there.
+        </p>
+      </form>
+    </section>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        JavaScript is needed for the interactive map and prepared
+        messages. The address, external map and email links remain
+        available.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="enquiry.html">Product enquiries</a>
+    </p>
+  </footer>
+</body>
+</html>

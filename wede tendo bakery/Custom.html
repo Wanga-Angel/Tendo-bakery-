@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description"
+        content="Prepare Tendo Bakery custom cake and bakery instructions in Elim. Save a draft and enquire about availability.">
+
+  <title>Custom Cake Instructions | Tendo Bakery, Elim</title>
+
+  <link rel="canonical"
+        href="https://tendobakery.co.za/Custom.html">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>Tendo Bakery</h1>
+    <p>Baked with joy in Elim, Limpopo</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="Homepage.html">Home</a>
+    <a href="Category.html">Category</a>
+    <a href="Custom.html">Custom</a>
+    <a href="Account.html">My profile</a>
+    <a href="checkout.html">Order draft</a>
+    <a href="enquiry.html">Enquiries</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+    <h2>Customise your bakery draft</h2>
+
+    <p>
+      Choose a category and describe your preferred design or other
+      instructions. Save changes before choosing another category.
+    </p>
+
+    <div class="actions">
+      <button type="button" data-custom="Cakes"
+              aria-controls="form-area" aria-expanded="false">
+        Cakes
+      </button>
+
+      <button type="button" data-custom="Cupcakes"
+              aria-controls="form-area" aria-expanded="false">
+        Cupcakes
+      </button>
+
+      <button type="button" data-custom="Muffins"
+              aria-controls="form-area" aria-expanded="false">
+        Muffins
+      </button>
+
+      <button type="button" data-custom="Cinnamon rolls"
+              aria-controls="form-area" aria-expanded="false">
+        Cinnamon rolls
+      </button>
+    </div>
+
+    <form id="form-area" hidden>
+      <h3 id="item-title"></h3>
+
+      <label for="note-box">Custom instructions</label>
+
+      <textarea id="note-box" name="instructions"
+                rows="5" maxlength="500"
+                aria-describedby="note-help"></textarea>
+
+      <p id="note-help" class="help">
+        Maximum 500 characters. Clear the text and save to remove
+        an existing note. Do not include passwords or payment details.
+      </p>
+
+      <div class="actions">
+        <button type="submit">Save instructions</button>
+
+        <a class="button" href="checkout.html">
+          Review draft
+        </a>
+
+        <a class="button" href="enquiry.html">
+          Ask about custom options
+        </a>
+      </div>
+    </form>
+
+    <p class="notice">
+      Instructions are saved locally. They do not reserve products
+      or confirm a price. Use the enquiry form to request a response.
+    </p>
+
+    <p id="toast" class="message" role="status"
+       aria-live="polite" aria-atomic="true" hidden></p>
+
+    <noscript>
+      <p>
+        Enable JavaScript to save instructions, or
+        <a href="mailto:contact@tendobakery.co.za">
+          email the bakery directly
+        </a>.
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <address>
+      Tendo Bakery · 123 Baker Street, Elim, Limpopo,
+      0960, South Africa
+    </address>
+    <p>
+      <a href="mailto:contact@tendobakery.co.za">
+        contact@tendobakery.co.za
+      </a>
+      · <a href="contact.html">Contact and location</a>
+    </p>
+  </footer>
+</body>
+</html>

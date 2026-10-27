@@ -1,0 +1,416 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --pink: #ffdae7;
+  --yellow: #ffe879;
+  --accent: #fd619d;
+  --ink: #4a2b02;
+  --brown: #8e410c;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--pink);
+  color: var(--ink);
+  font-family: "Comic Sans MS", "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+nav,
+main,
+footer {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+h1 {
+  color: #a92b5a;
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h2,
+h3 {
+  line-height: 1.3;
+}
+
+a {
+  color: #763509;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 1.5rem 2rem;
+  padding: 0.75rem;
+  background: var(--yellow);
+  border-radius: 12px;
+  box-shadow: 0 5px 0 rgb(142 65 12 / 15%);
+}
+
+nav a {
+  padding: 0.5rem 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a[aria-current="page"] {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+button,
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border: 3px solid var(--yellow);
+  border-radius: 20px;
+  background: var(--yellow);
+  color: #763509;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 0 var(--brown);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover:not(:disabled),
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--brown);
+}
+
+button:active:not(:disabled),
+.button:active {
+  transform: translateY(2px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: 0.5rem;
+  background: white;
+  padding: 0.75rem;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+}
+
+.actions,
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  margin-block: 1.5rem;
+}
+
+.toolbar > div {
+  flex: 1 1 220px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 1.5rem;
+  margin-block: 1.5rem;
+}
+
+.card {
+  background: #fff4f8;
+  border: 2px solid #eeb5c9;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin-top: 0.75rem;
+}
+
+.category-card {
+  text-align: center;
+}
+
+.category-card button {
+  width: 100%;
+}
+
+.category-card [aria-expanded="true"] {
+  border-color: var(--brown);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery-button {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.gallery-button span {
+  display: block;
+}
+
+.gallery-button img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 720px;
+  margin-block: 1.5rem;
+}
+
+fieldset {
+  border: 2px solid #c987a0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+legend,
+label {
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--brown);
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin: 0 0.5rem 0 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: baseline;
+  margin-block: 1rem;
+  font-weight: 400;
+}
+
+.help {
+  font-size: 0.9rem;
+}
+
+.message,
+.notice,
+.demo-note {
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.message {
+  background: var(--yellow);
+  border: 2px solid var(--brown);
+}
+
+.message-error {
+  background: #fff0f0;
+  border-color: #a11919;
+  color: #a11919;
+}
+
+.notice,
+.demo-note {
+  background: #fff4f8;
+  border-left: 4px solid var(--brown);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  background: var(--yellow);
+  border: 3px solid var(--yellow);
+  border-radius: 12px;
+  border-spacing: 0;
+  margin: 1rem 0 2rem;
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px dashed #c9975d;
+}
+
+td select {
+  width: 5rem;
+  margin: 0;
+}
+
+.order-list p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+details {
+  padding: 1rem;
+  margin-block: 1rem;
+  background: #fff4f8;
+  border-radius: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+address {
+  font-style: normal;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-block: 1.5rem;
+  border-top: 2px solid #eeb5c9;
+}
+
+#map {
+  height: 360px;
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--brown);
+  margin-block: 1rem;
+}
+
+dialog {
+  width: min(900px, 94vw);
+  max-height: 94vh;
+  padding: 1rem;
+  border: 3px solid var(--brown);
+  border-radius: 16px;
+  background: var(--pink);
+  color: var(--ink);
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+
+dialog figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+#lightbox-image {
+  display: block;
+  max-height: 65vh;
+  max-width: 100%;
+  width: auto;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  nav a {
+    padding: 0.4rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+
+  .actions > .button {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  button,
+  .button {
+    transition: none;
+  }
+}
