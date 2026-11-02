@@ -1,0 +1,5 @@
+# Controls crawling, not security or authentication.
+User-agent: *
+Allow: /
+
+Sitemap: https://tendobakery.co.za/sitemap.xml
