@@ -19,37 +19,41 @@ I ensured the entire project is Responsive by using relative units (rem and %) i
 
 Part3
 
-I improved my Tendo Bakery website to make it easier to use, more organised and easier to update. I fixed the navigation links so they use the correct filenames on every page. I also organised the HTML and moved the JavaScript into one shared file, so I can update the website’s behaviour without editing the same code on several pages.
+I improved my Tendo Bakery website to make it easier to use, more interactive and better organised. I kept the pink-and-yellow design but improved the layout so it works better on smaller screens (Webflow, 2024).
 
-I kept the pink-and-yellow design but improved the layout for smaller screens. I added clear labels to form fields and visible outlines that help users see which button or link they have selected with their keyboard. These changes make the website easier to navigate.
+For the structure, I fixed the navigation links so they use the correct filenames on every page. I also organised the HTML and moved all the JavaScript into one shared file, so I don't have to edit the same code on multiple pages (YouTube, 2024b). I highlighted the current navigation link and added a homepage animation that respects users who prefer less movement.
 
-On the Custom page, users can write and save instructions for their chosen product. I limited the instructions to 500 characters and allowed users to remove them by clearing the text and saving again. I also added messages to explain whether their information was saved or a problem occurred.
+To help customers, I added product search and alphabetical sorting to find categories faster. JavaScript now displays flavours, saves quantities and manages custom instructions. On the Custom page users can write and save instructions up to 500 characters, and they can remove them by clearing the text and saving again. On the Checkout page, the script brings the saved quantities and instructions together into an order summary. It checks that the summary is not empty before confirming and asks users before clearing their order. Customer instructions are displayed as plain text so they are not treated as HTML code (YouTube, 2024b).
 
-On the Checkout page, my JavaScript brings the saved quantities and custom instructions together into an order summary. It checks that the summary is not empty before confirmation and asks users before clearing their order. I display customer instructions as plain text so they are not treated as HTML code.
+For accessibility, I added clear labels to form fields and visible outlines for keyboard navigation (MDN Web Docs, 2024). I also added an image gallery with a lightbox and an interactive map using Leaflet and OpenStreetMap (Leaflet, 2024). The design was guided by a bakery example I researched (YouTube, 2024a).
 
-I removed password storage because saving passwords in the browser is unsafe. The Account page now checks the format of an email address and saves it as part of a demonstration profile. It does not provide a real login system.
+For forms and safety, I removed password storage because saving passwords in the browser is unsafe (OWASP Foundation, 2024). The Account page now saves customer names, phone numbers, email addresses and preferences with permission and checks the email format (MDN Web Docs, 2024). I created separate enquiry and contact forms with input validation, feedback messages and email-draft buttons. AJAX submission code is included but it still needs a backend to work.
 
-Finally, I added a homepage animation and highlighted the current navigation link. The animation respects users who prefer less movement. Overall, these changes make my website more interactive and clearer to use. However, it still does not send orders or take payments, and I need to complete the remaining assignment features and test the website.
-I improved my Tendo Bakery website to make it easier to use, more interactive and better organised. I kept the pink-and-yellow design and made the layout suitable for smaller screens.
+I added page descriptions, a sitemap and robots.txt to improve SEO and crawling. The sitemap and robots.txt work was supported by tutorials on sitemaps and robots.txt (YouTube, 2024c; YouTube, 2024d) and Google Search Central guidance (Google Search Central, 2024).
+Overall the site is more interactive and clearer to use now, but it still doesn't send orders or take payments, and it needs browser testing, hosting configuration and real submission services. It also doesn't provide secure login or order confirmation online.
 
-I added product search and alphabetical sorting to help customers find categories. JavaScript displays flavours, saves quantities and manages custom instructions. Customers can review their selections before preparing an enquiry.
+ Inserted files had to be resent due to technical issues and then organised into a folder.
+ Replaced 'business location map' with rosebank college due to the business being a hypothetical company for the assignment. Tried to ask teacher if okay but lead to no response after suggesting the use of it.
+ 
+ References
+ Google Search Central. (2024) SEO Starter Guide. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide [Accessed:  21 Oct 2026].
+ 
+ Leaflet. (2024) Leaflet Documentation. Available at: https://leafletjs.com/ [Accessed: 21 oct 2026].
+ 
+ MDN Web Docs. (2024) MDN Web Docs. Available at: https://developer.mozilla.org/ [Accessed: 26 oct 2026].
+ 
+ OWASP Foundation. (2024) OWASP Foundation. Available at: https://owasp.org/ [Accessed: 27 2026].
+ 
+ Webflow. (2024) Webflow. Available at: https://www.webflow.com [Accessed: 27 oct 2026].
+ 
+ YouTube. (2024a) Bakery Website Explanation. Available at: https://youtu.be/MYE6T_gd7H0?si=iCkJcALHaquZiQjo [Accessed: 30 oct 2026].
+ 
+ YouTube. (2024b) Java Implementation and Error Control. Available at: https://youtu.be/eIrMbAQSU34?si=0BF0SvfpqgNkIOXs [Accessed: 30 oct 2026].
+ 
+ YouTube. (2024c) Robots.txt Research. Available at: https://youtu.be/IXNEVt9rZG8?si=a1z-jzJ5FUdqFYNR [Accessed: 31 oct 2026]
+ 
+ YouTube. (2024d) XML Sitemap. Available at: https://youtu.be/R_UYM9yEuYg?si=ZaeaEavIxH8S0bIj [Accessed: 1 Nov 2026].
 
-I added an image gallery with a lightbox and an interactive map using Leaflet and OpenStreetMap. The Account page now saves customer names, phone numbers, email addresses and preferences with permission. I removed password storage because it was unsafe.
+Deployed website link
 
-I created separate enquiry and contact forms with input validation, feedback messages and email-draft buttons. AJAX submission code is included, but it needs a working backend before online sending can begin.
-
-I used MDN documentation to guide form validation, dialogs, image loading and Fetch API code. Leaflet documentation supported the map. Google Search Central informed my SEO changes, while OWASP guidance supported safer handling of customer information.
-
-I added page descriptions, a sitemap and robots.txt. However, the website still needs browser testing, hosting configuration and real submission services. It does not process payments, provide secure login or confirm orders for customers online.
-
-The research for this part has been done with multipule sourses
-https://youtu.be/MYE6T_gd7H0?si=iCkJcALHaquZiQjo
-for soe explination and relavent research as it follows a bakerey
-https://youtu.be/eIrMbAQSU34?si=0BF0SvfpqgNkIOXs
-for java implicaation into website and error control
-https://youtu.be/IXNEVt9rZG8?si=a1z-jzJ5FUdqFYNR
-for pseudo robot.txt and research on robot
-https://youtu.be/R_UYM9yEuYg?si=ZaeaEavIxH8S0bIj
-for xml sitemap and 
-www.webflow.com .
-inserted files had to be resent due to techical issues and organized for the files to be sorted into a folder
+https://wanga-angel.github.io/Tendo-bakery-/
